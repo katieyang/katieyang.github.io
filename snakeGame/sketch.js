@@ -20,15 +20,15 @@ function preload() {
 
 function setup() {
   let cnv = createCanvas(400, 400);
-  cnv.mousePressed(canvasPressed);
+  // cnv.mousePressed(canvasPressed);
   s = new Snake();
   f = new Food();
   frameRate(5);
 }
 
-function canvasPressed(){
-  song.loop();
-}
+// function canvasPressed(){
+//   song.loop();
+// }
 
 function draw() {
   background(51);
