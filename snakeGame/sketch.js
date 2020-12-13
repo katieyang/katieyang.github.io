@@ -11,18 +11,23 @@ var scl = 40;
 var score = 0;
 
 function preload() {
-  song = loadSound('snakeGame/bensound-punky.mp3');
-  gameOverSFX = loadSound('snakeGame/game-over.wav');
-  eatingSFX = loadSound('snakeGame/eating.mp3');
+  song = loadSound('bensound-punky.mp3');
+  gameOverSFX = loadSound('game-over.wav');
+  eatingSFX = loadSound('eating.mp3');
   song.setVolume(0.05);
-  apple = loadImage('snakeGame/apple.png');
+  apple = loadImage('apple.png');
 }
 
 function setup() {
-  createCanvas(400, 400);
+  let cnv = createCanvas(400, 400);
+  cnv.mousePressed(canvasPressed);
   s = new Snake();
   f = new Food();
   frameRate(5);
+}
+
+function canvasPressed(){
+  song.loop();
 }
 
 function draw() {
