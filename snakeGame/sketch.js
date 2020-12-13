@@ -15,7 +15,7 @@ function preload() {
   gameOverSFX = loadSound('game-over.wav');
   eatingSFX = loadSound('eating.mp3');
   song.setVolume(0.05);
-  img = loadImage('apple.png');
+  apple = loadImage('apple.png');
 }
 
 function setup() {
@@ -186,7 +186,7 @@ function Food(){
   this.y = round(random(0,(height-scl)/scl)) * scl;
   
   this.show = function() {
-    image(img, this.x, this.y, scl, scl);
+    image(apple, this.x, this.y, scl, scl);
   }
 
   this.update = function(){ 
