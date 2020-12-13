@@ -20,15 +20,10 @@ function preload() {
 
 function setup() {
   let cnv = createCanvas(400, 400);
-  // cnv.mousePressed(canvasPressed);
   s = new Snake();
   f = new Food();
   frameRate(5);
 }
-
-// function canvasPressed(){
-//   song.loop();
-// }
 
 function draw() {
   background(51);
@@ -162,16 +157,16 @@ function Snake() {
       }
       //show snake eyes
       fill("black")
-      if(dir == "UP"){
+      if(dir == "UP" && !gameOver){
         ellipse(this.body[0][0] + 10,this.body[0][1] + 30,10,10);
         ellipse(this.body[0][0] + 30,this.body[0][1] + 30,10,10);
-      } else if (dir == "DOWN") {
+      } else if (dir == "DOWN" && !gameOver) {
         ellipse(this.body[0][0] + 10,this.body[0][1] + 10,10,10);
         ellipse(this.body[0][0] + 30,this.body[0][1] + 10,10,10);
-      } else if (dir == "LEFT") {
+      } else if (dir == "LEFT" && !gameOver) {
         ellipse(this.body[0][0] + 30,this.body[0][1] + 10,10,10);
         ellipse(this.body[0][0] + 30,this.body[0][1] + 30,10,10);
-      } else if (dir == "RIGHT") {
+      } else if (dir == "RIGHT" && !gameOver) {
         ellipse(this.body[0][0] + 10,this.body[0][1] + 10,10,10);
         ellipse(this.body[0][0] + 10,this.body[0][1] + 30,10,10); 
       }
