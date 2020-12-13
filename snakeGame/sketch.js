@@ -11,11 +11,11 @@ var scl = 40;
 var score = 0;
 
 function preload() {
-  song = loadSound('bensound-punky.mp3');
-  gameOverSFX = loadSound('game-over.wav');
-  eatingSFX = loadSound('eating.mp3');
+  song = loadSound('snakeGame/bensound-punky.mp3');
+  gameOverSFX = loadSound('snakeGame/game-over.wav');
+  eatingSFX = loadSound('snakeGame/eating.mp3');
   song.setVolume(0.05);
-  apple = loadImage('apple.png');
+  apple = loadImage('snakeGame/apple.png');
 }
 
 function setup() {
